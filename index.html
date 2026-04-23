@@ -8,6 +8,7 @@
     <script src="script.js" defer></script>
   </head>
   <body>
+    <div class="nav-overlay"></div>
     <div class="layout">
       <div class="page">
         <!-- HEADER -->
@@ -15,26 +16,30 @@
         <header>
           <nav>
             <img src="images/logo.svg" alt="Logo" />
-            <button class="hamburger" id="hamburgerBtn" aria-label="Menu">
-              <span></span><span></span><span></span>
+            <button
+              class="hamburger"
+              aria-label="Toggle menu"
+              aria-expanded="false"
+            >
+              <span></span>
+              <span></span>
+              <span></span>
             </button>
-            <div class="mobile-menu-overlay" id="mobileMenuOverlay"></div>
-            <ul class="nav-menu" id="navMenu">
-              <li class="close-menu-item">
-                <button class="close-menu" id="closeMenuBtn">✕</button>
-              </li>
+            <ul>
               <li><a href="#">Home</a></li>
               <li><a href="#">About</a></li>
               <li><a href="#" class="nav-highlight1">Services</a></li>
               <li><a href="#" class="nav-highlight2">Case Studies</a></li>
               <li><a href="#">Resources</a></li>
               <li><a href="#">Support</a></li>
-              <li class="mobile-buttons">
-                <button class="header-login mobile-login">Login</button>
-                <button class="header-signup mobile-signup">Sign Up</button>
+              <li class="header-btn-mobile">
+                <button class="header-login">Login</button>
+              </li>
+              <li class="header-btn-mobile">
+                <button class="header-signup">Sign Up</button>
               </li>
             </ul>
-            <div class="header-buttons desktop-only">
+            <div class="header-buttons">
               <button class="header-login">Login</button>
               <button class="header-signup">Sign Up</button>
             </div>
@@ -108,9 +113,6 @@
           <!-- FIRST COIN SECTION -->
 
           <section class="coin-section coin-section1">
-            <div class="coin-image">
-              <img src="images/coin1.png" alt="coin image" />
-            </div>
             <div class="coin-content">
               <h2>Endless choice of games. Endless chance to win.</h2>
               <div class="coin-features">
@@ -136,14 +138,14 @@
               </div>
               <button>Explore the Casino</button>
             </div>
+            <div class="coin-image">
+              <img src="images/coin1.png" alt="coin image" />
+            </div>
           </section>
 
           <!-- SECOND COIN SECTION -->
 
           <section class="coin-section coin-section2">
-            <div class="coin-image">
-              <img src="images/coin2.png" alt="coin image" />
-            </div>
             <div class="coin-content">
               <h2>Your ticket to the world of big events: watch, bet, win</h2>
               <div class="coin-features">
@@ -168,6 +170,9 @@
                 </div>
               </div>
               <button>Explore sports betting</button>
+            </div>
+            <div class="coin-image">
+              <img src="images/coin2.png" alt="coin image" />
             </div>
           </section>
 
@@ -355,101 +360,100 @@
 
           <!-- FAQ SECTION -->
 
-          <section class="faq-section">
-            <div class="faq-container">
-              <div class="faq-content">
-                <h2>Still have questions?</h2>
-                <button>Read our guides</button>
+          <section class="faq-section grid-section">
+            <div class="faq-content">
+              <h2>Still have questions?</h2>
+              <button>Read our guides</button>
+            </div>
+            <div class="faq-items">
+              <div class="faq-item">
+                <button class="faq-question">
+                  How do I create an account?
+                  <span class="faq-icon"></span>
+                </button>
+                <div class="faq-answer">
+                  <p>
+                    To create an account, click on the "Sign Up" button at the
+                    top right corner of the homepage and fill in the required
+                    information.
+                  </p>
+                </div>
               </div>
-              <div class="faq-items">
-                <div class="faq-item">
-                  <button class="faq-question">
-                    How do I create an account?
-                    <span class="faq-icon"></span>
-                  </button>
-                  <div class="faq-answer">
-                    <p>
-                      To create an account, click on the "Sign Up" button at the
-                      top right corner of the homepage and fill in the required
-                      information.
-                    </p>
-                  </div>
-                </div>
 
-                <div class="faq-item">
-                  <button class="faq-question">
-                    What payment methods do you accept?
-                    <span class="faq-icon"></span>
-                  </button>
-                  <div class="faq-answer">
-                    <p>
-                      We accept a wide range of payment methods, including
-                      credit cards, e-wallets, and cryptocurrencies. For more
-                      details, please visit our Payments page.
-                    </p>
-                  </div>
-                </div>
+              <div class="faq-item">
+                <button class="faq-question">
+                  What payment methods do you accept?
 
-                <div class="faq-item">
-                  <button class="faq-question">
-                    What is the minimum deposit amount?
-                    <span class="faq-icon"></span>
-                  </button>
-                  <div class="faq-answer">
-                    <p>
-                      The minimum deposit amount varies depending on the payment
-                      method you choose. Generally, it starts from $10 or its
-                      equivalent in other currencies. Please check our Payments
-                      page for specific details on each payment method.
-                    </p>
-                  </div>
+                  <span class="faq-icon"></span>
+                </button>
+                <div class="faq-answer">
+                  <p>
+                    We accept a wide range of payment methods, including credit
+                    cards, e-wallets, and cryptocurrencies. For more details,
+                    please visit our Payments page.
+                  </p>
                 </div>
+              </div>
 
-                <div class="faq-item">
-                  <button class="faq-question">
-                    How long do withdrawals take?
-                    <span class="faq-icon"></span>
-                  </button>
-                  <div class="faq-answer">
-                    <p>
-                      Withdrawal times depend on the payment method used.
-                      E-wallet withdrawals are typically processed within 24
-                      hours, while credit card and bank transfer withdrawals may
-                      take 3-5 business days. Cryptocurrency withdrawals are
-                      usually processed within 1-2 hours.
-                    </p>
-                  </div>
+              <div class="faq-item">
+                <button class="faq-question">
+                  What is the minimum deposit amount?
+                  <span class="faq-icon"></span>
+                </button>
+                <div class="faq-answer">
+                  <p>
+                    The minimum deposit amount varies depending on the payment
+                    method you choose. Generally, it starts from $10 or its
+                    equivalent in other currencies. Please check our Payments
+                    page for specific details on each payment method.
+                  </p>
                 </div>
+              </div>
 
-                <div class="faq-item">
-                  <button class="faq-question">
-                    Is there a mobile app available?
-                    <span class="faq-icon"></span>
-                  </button>
-                  <div class="faq-answer">
-                    <p>
-                      Yes, we have a mobile app available for both iOS and
-                      Android devices. You can download it from the App Store or
-                      Google Play Store. The app offers a seamless gaming
-                      experience on the go, allowing you to access all your
-                      favorite games and features.
-                    </p>
-                  </div>
+              <div class="faq-item">
+                <button class="faq-question">
+                  How long do withdrawals take?
+                  <span class="faq-icon"></span>
+                </button>
+                <div class="faq-answer">
+                  <p>
+                    Withdrawal times depend on the payment method used. E-wallet
+                    withdrawals are typically processed within 24 hours, while
+                    credit card and bank transfer withdrawals may take 3-5
+                    business days. Cryptocurrency withdrawals are usually
+                    processed within 1-2 hours.
+                  </p>
                 </div>
+              </div>
 
-                <div class="faq-item">
-                  <button class="faq-question">
-                    What should I do if I forget my password?
-                    <span class="faq-icon"></span>
-                  </button>
-                  <div class="faq-answer">
-                    <p>
-                      If you forget your password, click on the "Login" button
-                      and then select "Forgot Password". Follow the instructions
-                      to reset your password. You will receive an email with a
-                      link to create a new password.
-                    </p>
-                  </div>
+              <div class="faq-item">
+                <button class="faq-question">
+                  Is there a mobile app available?
+                  <span class="faq-icon"></span>
+                </button>
+                <div class="faq-answer">
+                  <p>
+                    Yes, we have a mobile app available for both iOS and Android
+                    devices. You can download it from the App Store or Google
+                    Play Store. The app offers a seamless gaming experience on
+                    the go, allowing you to access all your favorite games and
+                    features.
+                  </p>
+                </div>
+              </div>
+
+              <div class="faq-item">
+                <button class="faq-question">
+                  What should I do if I forget my password?
+                  <span class="faq-icon"></span>
+                </button>
+                <div class="faq-answer">
+                  <p>
+                    If you forget your password, click on the "Login" button and
+                    then select "Forgot Password". Follow the instructions to
+                    reset your password. You will receive an email with a link
+                    to create a new password.
+                  </p>
                 </div>
               </div>
             </div>

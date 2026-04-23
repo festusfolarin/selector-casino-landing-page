@@ -1,4 +1,5 @@
-// FAQ Accordion Script
+// ── FAQ Accordion ──────────────────────────────────────────────
+
 const faqItems = document.querySelectorAll(".faq-item");
 
 faqItems.forEach((item) => {
@@ -7,15 +8,6 @@ faqItems.forEach((item) => {
 
   button.addEventListener("click", () => {
     const isActive = item.classList.contains("active");
-
-    // Close other open FAQs
-    faqItems.forEach((otherItem) => {
-      if (otherItem !== item && otherItem.classList.contains("active")) {
-        const otherAnswer = otherItem.querySelector(".faq-answer");
-        otherItem.classList.remove("active");
-        otherAnswer.style.maxHeight = null;
-      }
-    });
 
     item.classList.toggle("active");
 
@@ -34,38 +26,58 @@ window.addEventListener("resize", () => {
     .forEach((answer) => {
       answer.style.maxHeight = answer.scrollHeight + "px";
     });
+
+  // Close mobile menu if viewport grows to tablet/desktop
+  if (window.innerWidth >= 640) {
+    closeMenu();
+  }
 });
 
-// Hamburger Menu Functionality
-const hamburgerBtn = document.getElementById("hamburgerBtn");
-const navMenu = document.getElementById("navMenu");
+// ── Hamburger / Mobile Nav ──────────────────────────────────────
 
-if (hamburgerBtn && navMenu) {
-  hamburgerBtn.addEventListener("click", () => {
-    navMenu.classList.toggle("active");
+const hamburger = document.querySelector(".hamburger");
+const navMenu = document.querySelector("nav ul");
+const overlay = document.querySelector(".nav-overlay");
 
-    // Animate hamburger to X
-    const spans = hamburgerBtn.querySelectorAll("span");
-    if (navMenu.classList.contains("active")) {
-      spans[0].style.transform = "rotate(45deg) translate(5px, 5px)";
-      spans[1].style.opacity = "0";
-      spans[2].style.transform = "rotate(-45deg) translate(5px, -5px)";
-    } else {
-      spans[0].style.transform = "none";
-      spans[1].style.opacity = "1";
-      spans[2].style.transform = "none";
-    }
-  });
-
-  // Close menu when clicking a link
-  const menuLinks = navMenu.querySelectorAll("a");
-  menuLinks.forEach((link) => {
-    link.addEventListener("click", () => {
-      navMenu.classList.remove("active");
-      const spans = hamburgerBtn.querySelectorAll("span");
-      spans[0].style.transform = "none";
-      spans[1].style.opacity = "1";
-      spans[2].style.transform = "none";
-    });
-  });
+function openMenu() {
+  hamburger.classList.add("open");
+  hamburger.setAttribute("aria-expanded", "true");
+  navMenu.classList.add("open");
+  overlay.classList.add("open");
+  document.body.style.overflow = "hidden";
 }
+
+function closeMenu() {
+  if (!hamburger) return;
+  hamburger.classList.remove("open");
+  hamburger.setAttribute("aria-expanded", "false");
+  navMenu.classList.remove("open");
+  overlay.classList.remove("open");
+  document.body.style.overflow = "";
+}
+
+hamburger.addEventListener("click", () => {
+  hamburger.classList.contains("open") ? closeMenu() : openMenu();
+});
+
+// Tapping the overlay closes the menu
+overlay.addEventListener("click", closeMenu);
+
+// Tapping a nav link on mobile closes the menu
+navMenu.querySelectorAll("a").forEach((link) => {
+  link.addEventListener("click", () => {
+    if (window.innerWidth < 640) closeMenu();
+  });
+});
+
+// ── Wrap table for horizontal scroll on mobile ──────────────────
+
+document.addEventListener("DOMContentLoaded", () => {
+  const table = document.querySelector(".table-section table");
+  if (table && !table.closest(".table-wrapper")) {
+    const wrapper = document.createElement("div");
+    wrapper.className = "table-wrapper";
+    table.parentNode.insertBefore(wrapper, table);
+    wrapper.appendChild(table);
+  }
+});
