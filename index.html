@@ -1,0 +1,677 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>CSS Template</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <div class="layout">
+      <div class="page">
+        <!-- HEADER -->
+
+        <header>
+          <nav>
+            <img src="images/logo.svg" alt="Logo" />
+            <button class="hamburger" id="hamburgerBtn" aria-label="Menu">
+              <span></span><span></span><span></span>
+            </button>
+            <div class="mobile-menu-overlay" id="mobileMenuOverlay"></div>
+            <ul class="nav-menu" id="navMenu">
+              <li class="close-menu-item">
+                <button class="close-menu" id="closeMenuBtn">✕</button>
+              </li>
+              <li><a href="#">Home</a></li>
+              <li><a href="#">About</a></li>
+              <li><a href="#" class="nav-highlight1">Services</a></li>
+              <li><a href="#" class="nav-highlight2">Case Studies</a></li>
+              <li><a href="#">Resources</a></li>
+              <li><a href="#">Support</a></li>
+              <li class="mobile-buttons">
+                <button class="header-login mobile-login">Login</button>
+                <button class="header-signup mobile-signup">Sign Up</button>
+              </li>
+            </ul>
+            <div class="header-buttons desktop-only">
+              <button class="header-login">Login</button>
+              <button class="header-signup">Sign Up</button>
+            </div>
+          </nav>
+        </header>
+
+        <!-- MAIN CONTENT -->
+
+        <main class="content">
+          <!-- HERO SECTION -->
+
+          <section class="hero-section">
+            <div class="hero-content">
+              <h1>Premium online casino and sports betting platform</h1>
+              <button>Get Started</button>
+              <h6>or log in via</h6>
+              <div class="social-login">
+                <a href="#" class="social-icon">
+                  <!-- Telegram -->
+                  <svg viewBox="0 0 24 24">
+                    <path
+                      d="M9.04 15.37l-.38 5.34c.54 0 .77-.23 1.05-.5l2.52-2.4 5.22 3.82c.96.53 1.64.25 1.88-.89l3.4-15.96h.001c.3-1.39-.5-1.93-1.43-1.58L1.4 9.5c-1.34.52-1.32 1.27-.23 1.61l5.13 1.6 11.9-7.5c.56-.34 1.07-.15.65.19"
+                    />
+                  </svg>
+                </a>
+
+                <a href="#" class="social-icon">
+                  <!-- VK -->
+                  <svg viewBox="0 0 24 24">
+                    <path
+                      d="M12.64 17.52h1.44s.43-.05.65-.3c.2-.22.19-.63.19-.63s-.03-1.92.87-2.2c.88-.27 2.01 1.86 3.21 2.68.91.62 1.6.48 1.6.48l3.22-.05s1.68-.1.88-1.42c-.07-.11-.5-1.07-2.6-3.02-2.2-2.04-1.9-1.71.74-5.24 1.61-2.15 2.25-3.46 2.05-4.02-.19-.53-1.36-.39-1.36-.39l-3.63.02s-.27-.04-.47.08c-.2.11-.32.37-.32.37s-.57 1.51-1.33 2.8c-1.6 2.72-2.24 2.87-2.5 2.7-.6-.39-.45-1.56-.45-2.39 0-2.6.4-3.68-.77-3.96-.39-.09-.68-.15-1.68-.16-1.28-.01-2.36 0-2.97.3-.41.2-.72.64-.53.67.24.03.78.15 1.06.53.36.49.34 1.58.34 1.58s.2 3.06-.47 3.44c-.46.26-1.08-.27-2.43-2.75-.7-1.28-1.23-2.7-1.23-2.7s-.1-.25-.28-.39c-.21-.16-.51-.21-.51-.21l-3.45.02s-.52.01-.7.24c-.16.21-.01.64-.01.64s2.7 6.32 5.75 9.5c2.8 2.9 5.97 2.71 5.97 2.71z"
+                    />
+                  </svg>
+                </a>
+
+                <a href="#" class="social-icon">
+                  <!-- Google -->
+                  <svg viewBox="0 0 24 24">
+                    <path
+                      d="M21.35 11.1h-9.18v2.98h5.27c-.23 1.48-1.72 4.34-5.27 4.34-3.17 0-5.75-2.63-5.75-5.88s2.58-5.88 5.75-5.88c1.8 0 3.01.77 3.7 1.43l2.53-2.44C16.92 4.3 14.8 3.3 12.17 3.3 7.58 3.3 4 6.97 4 11.54s3.58 8.24 8.17 8.24c4.72 0 7.83-3.32 7.83-8 0-.54-.06-.96-.15-1.37z"
+                    />
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <div class="hero-images">
+              <img
+                src="images/hero-img1.jfif"
+                class="hero-image1"
+                alt="hero image"
+              />
+              <img
+                src="images/hero-img2.jfif"
+                class="hero-image2"
+                alt="hero image"
+              />
+            </div>
+          </section>
+
+          <!-- PARTNERS SECTION -->
+
+          <section class="partner-logos">
+            <img src="images/partner1.svg" alt="partner logo" />
+            <img src="images/partner2.svg" alt="partner logo" />
+            <img src="images/partner3.svg" alt="partner logo" />
+            <img src="images/partner4.svg" alt="partner logo" />
+            <img src="images/partner5.svg" alt="partner logo" />
+            <img src="images/partner6.svg" alt="partner logo" />
+          </section>
+
+          <!-- FIRST COIN SECTION -->
+
+          <section class="coin-section coin-section1">
+            <div class="coin-image">
+              <img src="images/coin1.png" alt="coin image" />
+            </div>
+            <div class="coin-content">
+              <h2>Endless choice of games. Endless chance to win.</h2>
+              <div class="coin-features">
+                <div class="feature">
+                  <img src="images/coin-section-img1.svg" alt="" />
+                  <h6>New Releases</h6>
+                </div>
+
+                <div class="feature">
+                  <img src="images/coin-section-img2.svg" alt="" />
+                  <h6>Slots</h6>
+                </div>
+
+                <div class="feature">
+                  <img src="images/coin-section-img3.svg" alt="" />
+                  <h6>Live Casino</h6>
+                </div>
+
+                <div class="feature">
+                  <img src="images/coin-section-img4.svg" alt="" />
+                  <h6>Card Games</h6>
+                </div>
+              </div>
+              <button>Explore the Casino</button>
+            </div>
+          </section>
+
+          <!-- SECOND COIN SECTION -->
+
+          <section class="coin-section coin-section2">
+            <div class="coin-image">
+              <img src="images/coin2.png" alt="coin image" />
+            </div>
+            <div class="coin-content">
+              <h2>Your ticket to the world of big events: watch, bet, win</h2>
+              <div class="coin-features">
+                <div class="feature">
+                  <img src="images/coin-section2-img1.svg" alt="" />
+                  <h6>Sports</h6>
+                </div>
+
+                <div class="feature">
+                  <img src="images/coin-section2-img2.svg" alt="" />
+                  <h6>Esports</h6>
+                </div>
+
+                <div class="feature">
+                  <img src="images/coin-section2-img3.svg" alt="" />
+                  <h6>Horse Racing</h6>
+                </div>
+
+                <div class="feature">
+                  <img src="images/coin-section2-img4.svg" alt="" />
+                  <h6>Live Streams</h6>
+                </div>
+              </div>
+              <button>Explore sports betting</button>
+            </div>
+          </section>
+
+          <!-- CARDS/THIRD SECTION -->
+
+          <section class="cards-section">
+            <img src="images/cards.jpg" alt="cards image" class="cards-image" />
+            <div class="cards-content">
+              <h2>
+                Play confidently with a wide range of crypto and fiat currencies
+              </h2>
+              <p>
+                Reliable deposits and instant withdrawals available in various
+                crypto and fiat currencies. All this - with no minimum limit, a
+                flexible payment system, and secure online storage.
+              </p>
+              <button>Read more</button>
+            </div>
+          </section>
+
+          <!-- VIP SECTION  -->
+
+          <section class="vip-section">
+            <div class="vip-content">
+              <h2>
+                Place more bets, and your reward as a Selector VIP-Club player
+                will grow
+              </h2>
+              <p>
+                Discover a world of unique privileges, personalized service, and
+                exclusive bonuses - only for Selector VIP-Club level players.
+              </p>
+              <button>Join the VIP club</button>
+            </div>
+            <div class="vip-perks">
+              <div class="perk">
+                <img src="images/vip-perk1.svg" alt="VIP Perk 1" />
+                <div class="perk-content">
+                  <h6>Weekly bonuses</h6>
+                  <p>
+                    Every week of each month, you will receive a bonus reward
+                    based on your recent gaming activity. The more you bet, the
+                    higher the bonuses.
+                  </p>
+                </div>
+              </div>
+              <div class="perk">
+                <img src="images/vip-perk2.svg" alt="VIP Perk 1" />
+                <div class="perk-content">
+                  <h6>Your personal VIP manager</h6>
+                  <p>
+                    Enjoy exclusive access to a personal VIP manager whose job
+                    is to support you and address your gaming inquiries.
+                  </p>
+                </div>
+              </div>
+              <div class="perk">
+                <img src="images/vip-perk3.svg" alt="VIP Perk 1" />
+                <div class="perk-content">
+                  <h6>Payments for leveling up</h6>
+                  <p>
+                    Receive rewards each time you level up. The higher you go,
+                    the higher the payout.
+                  </p>
+                </div>
+              </div>
+              <div class="perk">
+                <img src="images/vip-perk4.svg" alt="VIP Perk 1" />
+                <div class="perk-content">
+                  <h6>Bonus for recent play</h6>
+                  <p>
+                    Want to recover what you've lost during an unlucky game?
+                    Selector offers cashback every time you level up.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- SUPPORT SECTION -->
+
+          <section class="support-section grid-section">
+            <div class="support-content">
+              <h2>Our support team speaks your language</h2>
+              <p>
+                24/7 assistance in your native language from our online support
+                team is at your service.
+              </p>
+            </div>
+            <div class="support-image">
+              <img src="images/support.svg" alt="Support" />
+            </div>
+          </section>
+
+          <!-- TABLE SECTION -->
+
+          <section class="table-section">
+            <h3>Stay updated with bets happening right now</h3>
+            <p>
+              Check out bets on popular games and live sports events, and see
+              how much you could win.
+            </p>
+            <div class="table-wrapper">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Game</th>
+                    <th>Player</th>
+                    <th>Bet</th>
+                    <th>Multiplier</th>
+                    <th>Payout</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Joker Stoker</td>
+                    <td>Roma Sorokin</td>
+                    <td>50.00 ₽</td>
+                    <td>x4</td>
+                    <td>200.00 ₽</td>
+                  </tr>
+                  <tr>
+                    <td>Cash'n Fruits 27</td>
+                    <td>Roma Sorokin</td>
+                    <td>80.00 ₽</td>
+                    <td>x2</td>
+                    <td>160.00 ₽</td>
+                  </tr>
+                  <tr>
+                    <td>Gates Of Selector</td>
+                    <td>Roma Sorokin</td>
+                    <td>150.00 ₽</td>
+                    <td>x2</td>
+                    <td>300.00 ₽</td>
+                  </tr>
+                  <tr>
+                    <td>Lucky Spins Selector</td>
+                    <td>Roma Sorokin</td>
+                    <td>100.00 ₽</td>
+                    <td>x5</td>
+                    <td>500.00 ₽</td>
+                  </tr>
+                  <tr>
+                    <td>El Dorado Infinity</td>
+                    <td>Roma Sorokin</td>
+                    <td>60.00 ₽</td>
+                    <td>x3</td>
+                    <td>180.00 ₽</td>
+                  </tr>
+                  <tr>
+                    <td>Tramp Day</td>
+                    <td>Roma Sorokin</td>
+                    <td>120.00 ₽</td>
+                    <td>x3</td>
+                    <td>360.00 ₽</td>
+                  </tr>
+                  <tr>
+                    <td>Age Of Glory</td>
+                    <td>Roma Sorokin</td>
+                    <td>110.00 ₽</td>
+                    <td>x5</td>
+                    <td>550.00 ₽</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+
+          <!-- COMMUNITY SECTION -->
+
+          <section class="community-section grid-section">
+            <div class="community-image">
+              <img src="images/community.png" alt="Community" />
+            </div>
+            <div class="community-content">
+              <h2>Join our community of Selectors</h2>
+              <p>
+                Connect with fellow players, share your gaming experiences, and
+                stay updated on the latest news and promotions by joining our
+                vibrant community of Selectors.
+              </p>
+              <button>Join the community</button>
+            </div>
+          </section>
+
+          <!-- FAQ SECTION -->
+
+          <section class="faq-section">
+            <div class="faq-container">
+              <div class="faq-content">
+                <h2>Still have questions?</h2>
+                <button>Read our guides</button>
+              </div>
+              <div class="faq-items">
+                <div class="faq-item">
+                  <button class="faq-question">
+                    How do I create an account?
+                    <span class="faq-icon"></span>
+                  </button>
+                  <div class="faq-answer">
+                    <p>
+                      To create an account, click on the "Sign Up" button at the
+                      top right corner of the homepage and fill in the required
+                      information.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="faq-item">
+                  <button class="faq-question">
+                    What payment methods do you accept?
+                    <span class="faq-icon"></span>
+                  </button>
+                  <div class="faq-answer">
+                    <p>
+                      We accept a wide range of payment methods, including
+                      credit cards, e-wallets, and cryptocurrencies. For more
+                      details, please visit our Payments page.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="faq-item">
+                  <button class="faq-question">
+                    What is the minimum deposit amount?
+                    <span class="faq-icon"></span>
+                  </button>
+                  <div class="faq-answer">
+                    <p>
+                      The minimum deposit amount varies depending on the payment
+                      method you choose. Generally, it starts from $10 or its
+                      equivalent in other currencies. Please check our Payments
+                      page for specific details on each payment method.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="faq-item">
+                  <button class="faq-question">
+                    How long do withdrawals take?
+                    <span class="faq-icon"></span>
+                  </button>
+                  <div class="faq-answer">
+                    <p>
+                      Withdrawal times depend on the payment method used.
+                      E-wallet withdrawals are typically processed within 24
+                      hours, while credit card and bank transfer withdrawals may
+                      take 3-5 business days. Cryptocurrency withdrawals are
+                      usually processed within 1-2 hours.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="faq-item">
+                  <button class="faq-question">
+                    Is there a mobile app available?
+                    <span class="faq-icon"></span>
+                  </button>
+                  <div class="faq-answer">
+                    <p>
+                      Yes, we have a mobile app available for both iOS and
+                      Android devices. You can download it from the App Store or
+                      Google Play Store. The app offers a seamless gaming
+                      experience on the go, allowing you to access all your
+                      favorite games and features.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="faq-item">
+                  <button class="faq-question">
+                    What should I do if I forget my password?
+                    <span class="faq-icon"></span>
+                  </button>
+                  <div class="faq-answer">
+                    <p>
+                      If you forget your password, click on the "Login" button
+                      and then select "Forgot Password". Follow the instructions
+                      to reset your password. You will receive an email with a
+                      link to create a new password.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </main>
+
+        <!-- FOOTER SECTION -->
+
+        <footer class="footer-section">
+          <div class="footer-logos">
+            <img src="images/footer-logo1.svg" alt="partner logo" />
+            <img src="images/footer-logo2.svg" alt="partner logo" />
+            <img src="images/footer-logo3.png" alt="partner logo" />
+            <img src="images/footer-logo4.png" alt="partner logo" />
+            <img src="images/footer-logo5.png" alt="partner logo" />
+            <img src="images/footer-logo6.png" alt="partner logo" />
+            <img src="images/footer-logo7.png" alt="partner logo" />
+            <img src="images/footer-logo8.png" alt="partner logo" />
+            <img src="images/footer-logo9.png" alt="partner logo" />
+            <img src="images/footer-logo10.png" alt="partner logo" />
+          </div>
+          <p class="footer-credits">
+            Copyright © 2019 - 2026 Selector. All rights reserved.
+          </p>
+          <div class="footer-links">
+            <a href="https://www.facebook.com/cleverbetlabs" target="_blank"
+              >Facebook</a
+            >
+            <a href="https://www.twitter.com/cleverbetlabs" target="_blank"
+              >Twitter</a
+            >
+            <a
+              href="https://www.linkedin.com/company/cleverbetlabs"
+              target="_blank"
+              >LinkedIn</a
+            >
+          </div>
+          <div class="footer-links">
+            <a href="#">Terms of Service</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Cookie Policy</a>
+          </div>
+          <br class="footer-breaker" />
+          <p class="footer-info">
+            selector.gg is owned and operated by Elsikora Group Limitada
+            registration number: 3-102-923334, registered address: Province 06
+            Puntarenas, Canton 11 Garabito, Jaco, East Side Of The Municipality
+            Of Garabito, Sanchez Chavarria Law Firm, Costa Rica. Contact us
+            support@selector.gg. selector.gg is licensed and regulated by the
+            Government of the Autonomous Island of Anjouan, Union of Comoros and
+            operates under License No. ALSI-202503005-FI1 selector.gg has passed
+            all regulatory compliance and is legally authorized to conduct
+            gaming operations for any and all games of chance and wagering.
+          </p>
+        </footer>
+      </div>
+
+      <!-- RIGHT SIDEBAR -->
+
+      <aside class="sidebar">
+        <div class="social-icons">
+          <a
+            href="https://t.me/cleverbetlabs"
+            target="_blank"
+            class="icon-telegram-send"
+            title="Telegram"
+          >
+            <svg viewBox="0 0 24 24">
+              <path
+                d="M22.27 1.57a1.5 1.5 0 0 0-1.54-.21L1.64 9.17a1.5 1.5 0 0 0 .08 2.79l4.65 1.55 2.1 6.43a.75.75 0 0 0 1.28.27l2.82-2.97 5.29 3.9a1.5 1.5 0 0 0 2.35-1.01l2.25-16.88a1.5 1.5 0 0 0-.19-1.68zM9.37 13.76l-.9 2.7-.9-2.76L17.1 6.34z"
+              />
+            </svg>
+          </a>
+          <a
+            href="https://vk.com/cleverbetlabs"
+            target="_blank"
+            class="icon-vk"
+            title="VK"
+          >
+            <svg viewBox="0 0 24 24">
+              <path
+                d="M21.54 7.19c.14-.47 0-.81-.67-.81h-2.22c-.56 0-.82.3-.96.63 0 0-1.12 2.73-2.71 4.5-.51.52-.75.68-1.02.68-.14 0-.35-.16-.35-.63V7.19c0-.57-.16-.81-.63-.81H9.82c-.36 0-.58.27-.58.53 0 .55.82.68.9 2.23v3.37c0 .72-.13.85-.41.85-.75 0-2.57-2.74-3.65-5.87-.21-.61-.42-.86-.99-.86H2.87c-.63 0-.76.3-.76.63 0 .59.75 3.52 3.51 7.38 1.84 2.64 4.43 4.08 6.79 4.08 1.41 0 1.59-.32 1.59-.86v-1.99c0-.63.13-.76.58-.76.33 0 .9.17 2.22 1.44 1.51 1.51 1.76 2.19 2.61 2.19h2.22c.63 0 .95-.32.77-.94-.2-.62-.92-1.52-1.87-2.58-.52-.61-1.29-1.26-1.53-1.6-.33-.43-.23-.62 0-1 0 0 2.71-3.82 2.99-5.12z"
+              />
+            </svg>
+          </a>
+          <a
+            href="https://ok.ru/cleverbetlabs"
+            target="_blank"
+            class="icon-ok"
+            title="Odnoklassniki"
+          >
+            <svg viewBox="0 0 24 24">
+              <path
+                d="M12 1a5 5 0 1 1 0 10A5 5 0 0 1 12 1zm0 3a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm5.25 8.75a1.25 1.25 0 0 1-1.06 1.98 9.3 9.3 0 0 1-2.44.38l2.6 2.6a1.25 1.25 0 0 1-1.77 1.77L12 16.9l-2.58 2.58a1.25 1.25 0 0 1-1.77-1.77l2.6-2.6a9.3 9.3 0 0 1-2.44-.38 1.25 1.25 0 1 1 .74-2.39A6.88 6.88 0 0 0 12 12.75c.85 0 1.69-.13 2.45-.31.45-.12.92.04 1.23.36l-.43-.05z"
+              />
+            </svg>
+          </a>
+          <a
+            href="https://t.me/cleverbetlabs"
+            target="_blank"
+            class="icon-telegram"
+            title="Telegram Channel"
+          >
+            <svg viewBox="0 0 24 24">
+              <path
+                d="M11.99 2C6.48 2 2 6.48 2 12s4.48 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zm4.23 7.17l-1.69 7.97c-.13.58-.47.72-.95.45l-2.62-1.93-1.26 1.22c-.14.14-.26.26-.53.26l.19-2.68 4.88-4.41c.21-.19-.05-.29-.33-.1l-6.03 3.79-2.6-.81c-.56-.18-.58-.56.12-.83l10.17-3.92c.46-.17.87.11.65.99z"
+              />
+            </svg>
+          </a>
+          <a
+            href="https://twitter.com/cleverbetlabs"
+            target="_blank"
+            class="icon-x"
+            title="X (Twitter)"
+          >
+            <svg viewBox="0 0 24 24">
+              <path
+                d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"
+              />
+            </svg>
+          </a>
+          <a
+            href="https://wa.me/cleverbetlabs"
+            target="_blank"
+            class="icon-whatsapp"
+            title="WhatsApp"
+          >
+            <svg viewBox="0 0 24 24">
+              <path
+                d="M17.47 14.38c-.3-.15-1.77-.87-2.04-.97-.28-.1-.48-.15-.68.15-.2.3-.77.97-.95 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.47-2.4-1.49-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.68-1.64-.93-2.25-.24-.59-.49-.51-.68-.52h-.58c-.2 0-.52.07-.79.37-.27.3-1.04 1.01-1.04 2.47s1.06 2.87 1.21 3.07c.15.2 2.09 3.19 5.06 4.48.71.3 1.26.49 1.69.62.71.22 1.36.19 1.87.12.57-.09 1.77-.72 2.02-1.42.25-.7.25-1.3.17-1.42-.07-.13-.27-.2-.57-.35zm-5.47 7.47h-.01a9.87 9.87 0 0 1-5.03-1.37l-.36-.21-3.73.98 1-3.64-.24-.38A9.86 9.86 0 0 1 2 12.01C2 6.48 6.48 2 12 2s10 4.48 10 10.01-4.47 9.84-10 9.84zm0-18.5A8.5 8.5 0 0 0 3.5 12a8.46 8.46 0 0 0 1.29 4.5L3.5 20.5l4.12-1.08A8.5 8.5 0 1 0 12 3.35z"
+              />
+            </svg>
+          </a>
+        </div>
+
+        <button class="live-btn"><span class="live-wave">〜</span> Live</button>
+
+        <div class="online-bar">
+          <span>Online: 2438</span>
+          <div class="lang-select">
+            <svg
+              class="lang-flag"
+              viewBox="0 0 16 16"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <clipPath id="circle-clip">
+                <circle cx="8" cy="8" r="8" />
+              </clipPath>
+              <g clip-path="url(#circle-clip)">
+                <rect width="16" height="16" fill="#fff" />
+                <rect y="5.33" width="16" height="5.34" fill="#0039A6" />
+                <rect y="10.66" width="16" height="5.34" fill="#D52B1E" />
+              </g>
+            </svg>
+            <span>▾</span>
+          </div>
+        </div>
+        <div>
+          <div class="user-group">
+            <div class="user-info">
+              <img src="images/user.jpg" alt="user" />
+              <div class="user-details">
+                <span class="user">selector43242414</span>
+                <span class="stat1">24342 RUB.</span>
+                <span class="stat2"
+                  >El Dorado Infinity Reels <sup>TM</sup></span
+                >
+              </div>
+            </div>
+            <div class="user-info">
+              <img src="images/user.jpg" alt="user" />
+              <div class="user-details">
+                <span class="user">selector43242414</span>
+                <span class="stat1">24342 RUB.</span>
+                <span class="stat2"
+                  >El Dorado Infinity Reels <sup>TM</sup></span
+                >
+              </div>
+            </div>
+            <div class="user-info">
+              <img src="images/user.jpg" alt="user" />
+              <div class="user-details">
+                <span class="user">selector43242414</span>
+                <span class="stat1">24342 RUB.</span>
+                <span class="stat2"
+                  >El Dorado Infinity Reels <sup>TM</sup></span
+                >
+              </div>
+            </div>
+            <div class="user-info">
+              <img src="images/user.jpg" alt="user" />
+              <div class="user-details">
+                <span class="user">selector43242414</span>
+                <span class="stat1">24342 RUB.</span>
+                <span class="stat2"
+                  >El Dorado Infinity Reels <sup>TM</sup></span
+                >
+              </div>
+            </div>
+            <div class="user-info">
+              <img src="images/user.jpg" alt="user" />
+              <div class="user-details">
+                <span class="user">selector43242414</span>
+                <span class="stat1">24342 RUB.</span>
+                <span class="stat2"
+                  >El Dorado Infinity Reels <sup>TM</sup></span
+                >
+              </div>
+            </div>
+            <div class="user-info">
+              <img src="images/user.jpg" alt="user" />
+              <div class="user-details">
+                <span class="user">selector43242414</span>
+                <span class="stat1">24342 RUB.</span>
+                <span class="stat2"
+                  >El Dorado Infinity Reels <sup>TM</sup></span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </body>
+</html>
