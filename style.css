@@ -32,8 +32,12 @@ body {
 
 .page {
   flex: 1;
-  padding: 0.75rem 1rem;
+  padding: 0.75rem 0rem;
   min-width: 0;
+}
+
+main {
+  overflow: hidden;
 }
 
 a {
@@ -47,6 +51,10 @@ li {
 section {
   max-width: 90rem;
   margin: auto;
+}
+
+section > * {
+  padding: 0 1rem;
 }
 
 /* NAV OVERLAY (mobile) */
@@ -280,8 +288,6 @@ header nav {
   align-items: center;
   justify-content: space-between;
   padding: 14px 16px;
-  flex-wrap: wrap;
-  gap: 0.5rem;
 }
 
 nav img {
@@ -329,7 +335,6 @@ nav ul {
   top: 0;
   right: 0;
   width: 75vw;
-  max-width: 280px;
   height: 100vh;
   background-color: #1c2029;
   flex-direction: column;
@@ -559,7 +564,7 @@ nav ul li a:hover {
   grid-template-columns: 1fr;
   align-items: center;
   gap: 1.5rem;
-  padding: 1.5rem 1rem;
+  padding: 1.5rem 10px;
   max-width: 90rem;
   margin: auto;
   margin-bottom: 2rem;
@@ -786,14 +791,9 @@ nav ul li a:hover {
 ───────────────────────────────────────────── */
 
 .support-section {
+  display: block;
   background-image: url("images/support-background-img.svg");
   background-repeat: no-repeat;
-}
-
-.support-section .support-content .support-image {
-  display: flex;
-  align-items: end;
-  justify-content: end;
 }
 
 /* ─────────────────────────────────────────────
@@ -915,6 +915,7 @@ nav ul li a:hover {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  text-align: left;
 }
 
 .faq-icon {
@@ -961,6 +962,7 @@ footer {
   padding: 1.25rem 1rem;
   max-width: 90rem;
   margin-bottom: 2rem;
+  margin: auto;
 }
 
 .footer-section .footer-logos {
@@ -1083,6 +1085,11 @@ footer {
     max-width: 95%;
   }
 
+  /* SUPPORT */
+  .support-section {
+    display: grid;
+  }
+
   /* Grid sections */
   .grid-section {
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -1131,7 +1138,6 @@ footer {
     transform: none !important;
     transition: none;
     overflow-y: visible;
-    flex-wrap: wrap;
   }
 
   nav ul li {
@@ -1169,7 +1175,7 @@ footer {
   .sidebar {
     width: 300px;
     height: 100vh;
-    position: sticky;
+    position: sticky !important;
     top: 0;
     flex-direction: column;
     flex-wrap: nowrap;
@@ -1209,12 +1215,13 @@ footer {
   .hero-section {
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 2.5rem;
-    padding: 40px;
+    align-items: center;
+    padding: 5rem 2.5rem;
     background-size: contain;
   }
 
   .hero-content h1 {
-    font-size: 3.5rem;
+    font-size: 3rem;
   }
 
   /* Partners */
